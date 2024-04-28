@@ -35,7 +35,7 @@ public class ConfigurationManager
 
 ### Factory
 The Factory pattern is used to create objects without exposing the creation logic to the client. In .NET, the Factory pattern is implemented using a class or a method that creates objects based on a set of parameters. This pattern is useful when you want to create objects based on a particular set of conditions, and you want to hide the creation logic from the client.
-```
+```csharp
 public interface  Shape
 {
   void Draw();
@@ -72,7 +72,7 @@ public enum ShapeType { Circle, Square }
 ### Builder
 The Builder pattern is used to separate the construction of a complex object from its representation. In .NET, the Builder pattern is implemented using a separate class or method that constructs the object step by step. This pattern is useful when you want to create complex objects that have many components, and you want to separate the construction logic from the representation.
 
-```
+```csharp
 public class Person
 {
     public string? FirstName { get; set; }
@@ -115,7 +115,7 @@ Person person = builder.SetFirstName("John").SetLastName("Doe").Build();
 ```
 ### Dependency Injection
 The Dependency Injection pattern is a creational pattern that provides a way to create objects without having to know the details of how they are constructed. This is useful when you need to create objects that have complex dependencies or are difficult to instantiate.
-```
+```csharp
 public class OrderProcessor
 {
   private DatabaseWriter _writer = new DatabaseWriter(); // Tight coupling
@@ -125,7 +125,6 @@ public class OrderProcessor
     _writer.WriteToDatabase(order);
   }
 }
-
 
 public interface IOrderWriter
 {
@@ -151,7 +150,7 @@ public class OrderProcessor
 ### Adapter
 The Adapter pattern is used to convert the interface of a class into another interface that clients expect. In .NET, the Adapter pattern is implemented using a separate class that acts as a bridge between two incompatible interfaces. This pattern is useful when you want to use a class that is not compatible with the existing codebase, and you want to convert its interface to make it compatible.
 
-```
+```csharp
 public interface IModernDocument
 {
   void Print(string text);
@@ -185,7 +184,7 @@ public class LegacyDocumentAdapter : IModernDocument
 ```
 ### Decorator
 The Decorator pattern is used to add functionality to an object dynamically. In .NET, the Decorator pattern is implemented using a separate class that wraps the original object and provides additional functionality. This pattern is useful when you want to add functionality to an object without changing its interface.
-```
+```csharp
 public interface ICoffee
 {
     public string GetDescription();
