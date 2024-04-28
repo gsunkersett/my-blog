@@ -13,7 +13,7 @@ There are three types of design patterns: Creational, Behavioral and Structural.
 ### Singleton
 
 The Singleton pattern is used to ensure that a class has only one instance, and it provides a global point of access to that instance.
-```
+```csharp
 public class ConfigurationManager
 {
   private static ConfigurationManager _instance;
